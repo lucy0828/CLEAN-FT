@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use CLEAN-FT, the code or the expert annotations, please cite the paper."
+title: "Does LLM Loneliness Detection Align with Expert Evidence?"
+type: software
+authors:
+  - name: "Anonymous (under review)"
+year: 2026
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Does LLM Loneliness Detection Align with Expert Evidence?"
+  authors:
+    - name: "Anonymous (under review)"
+  year: 2026
+  conference:
+    name: "Machine Learning for Health (ML4H) 2026, Proceedings Track (under review)"

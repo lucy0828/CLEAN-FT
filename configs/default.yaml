@@ -1,0 +1,259 @@
+# Configuration for the study. Everything a run depends on is here or in
+# results/decisions.json.
+
+seed: 42                       # stratified 10-fold assignment
+
+# Safety gate for the v3 TransformerLens/SAE migration. Code and CPU/mock tests
+# may run while false; any command that loads a study model must require an
+# explicit CLI override after study-owner review.
+execution:
+  allow_model_process: false
+
+budgets:
+  folds: [0, 2, 4, 6, 8]       # the five study folds
+
+# --- backbones (open decoder LLMs only) ------------------------------------
+models:
+  primary: gemma-2-2b
+  family_control: llama31-8b
+
+# --- API backbone (prompting only) -----------------------------------------
+prompting_api:                 # Claude Opus 5 over the Batch API: --model opus.
+  effort: low                  # a bounded classification against a fixed rubric,
+                               # the same setting Stage 3 pins for the same task
+  max_tokens: 4096             # reasoning + spans + the JSON contract per post
+                               # NOTE: this arm returns a decision and no token
+                               # distribution, so it publishes F1/FPR/FNR and no
+                               # AUROC. See src/stage1/METRICS.md.
+
+# --- methods ---------------------------------------------------------------
+probe:
+  logreg_C: 1.0                # fixed: nothing is tuned per budget
+  mlp_ig_steps: 256            # mlp_probe token attribution: midpoint steps on
+                               # the integrated-gradient path from the train-mean
+                               # baseline. Not tuned — set from the measured
+                               # completeness ladder in src/probe/mlp_probe.py.
+
+afr:                           # Automatic Feature Reweighting (Qiu et al. 2023,
+                               # github.com/AndPotap/afr) on frozen features:
+                               # the group-annotation-free shortcut baseline.
+  holdout_prop: 0.2            # the reference repo's --train_prop=-20
+  gamma: 1.44                  # AFR's published CelebA setting, NOT tuned here.
+  reg_coeff: 0.0               # AFR picks gamma on a GROUP-LABELLED validation
+                               # set; this study has no group labels, so one of
+                               # AFR's OWN published values is transplanted
+                               # rather than searched. Of the two, 1.44 is the
+                               # one whose weights stay in a sane regime on this
+                               # corpus: the base probe here is far less
+                               # confident than Waterbirds' ERM model (mean
+                               # p_true 0.72), so the Waterbirds gamma of 10
+                               # collapses the effective sample to 131 of 634
+                               # posts and costs 0.06 AUROC. Measured, gemma-2-2b
+                               # layer 17 fold 0. The measured ladder is in
+                               # src/probe/afr_probe.py; AFR helps across
+                               # 0.5-5 here and only breaks at 10.
+  lr: 0.01                     # second stage --init_lr
+  steps: 500                   # second-stage epochs, full batch. Load-bearing:
+                               # at reg_coeff 0 the objective is unbounded on a
+                               # separable split, so the finite step count from
+                               # the warm start IS the regularizer.
+  rebalance_weights: true      # the reference repo's --rebalance_weights
+
+glove_bigru:                   # the LonXplain-paper baseline family (Garg et al. 2023)
+  hidden: 128                  # 2x128 pooled = 256-d post vector, near GloVe's 300
+  dropout: 0.3
+  lr: 1.0e-3                   # 10x the LoRA lr: training a small net from scratch
+  weight_decay: 0.01
+  epochs: 30                   # cheap enough to run to convergence at every budget
+  batch_size: 16               # matched to the fine-tune arm
+  max_len: 512                 # matched to the fine-tune arm
+  clip: 1.0                    # gradient clipping; see glove_bigru.train
+
+# ===========================================================================
+# Mechanistic verification of the fine-tuning arms. Everything below is
+# pre-registered — fixed before any full run, never tuned per arm. Head
+# initialization is the only manipulated variable across the arms.
+# ===========================================================================
+
+full_finetune:                 # shared by both full-FT arms
+  lr: 1.0e-5                   # FT phase, all arms
+  anchor_lr: 2.0e-5            # conventional-recipe anchor cell (fold 0, seed 0)
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  epochs: 15                   # clipped by min/max steps, as in the LoRA recipe
+  max_steps: 600               # ~3 epochs at batch 16 over ~3,170 posts
+  min_steps: 50
+  batch_size: 16
+  max_len: 512
+  grad_clip: 1.0
+  grad_checkpointing: true
+  optimizer: adamw8bit         # bitsandbytes: 8-bit Adam states fit 8B on one 80GB card
+  fsdp:                        # fallback route if the single-GPU path fails G1
+    shard: full
+    dtype: bf16
+    activation_checkpointing: true
+    gpus: 2
+
+lora:                          # the LoRA column of the 2x2 (lora_ft, lora_lp_ft,
+                               # attn_lora_ft, attn_lora_lp_ft). Everything
+                               # else -- steps, batch, warmup, weight decay,
+                               # clipping, max_len -- comes from full_finetune
+                               # above, so the column differs from the full
+                               # arms in what moves and at what rate only.
+  r: 16                        # the rank and scaling of Hu et al. 2022's
+  alpha: 32                    # common recipe; not tuned here
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+                               # every attention and MLP projection of both
+                               # backbones (Gemma-2 and Llama-3.1 name them
+                               # identically)
+  lr: 1.0e-4                   # the conventional LoRA rate, 10x the full-FT
+                               # rate: the adapters start at zero and are the
+                               # only thing that moves. The head and the query
+                               # train at this same single rate.
+
+span_supervision:              # span_ft / attn_span_ft: the post BCE plus
+                               # `weight` x a token-level BCE on the head's own
+                               # projection w . h_t against the expert span
+                               # (fine_tune.span_term). Pre-registered, not
+                               # tuned.
+  weight: 1.0
+  balanced: true               # gold and non-gold tokens of a post averaged
+                               # separately, then together, so the ~8% of
+                               # tokens inside a span are not drowned
+
+attention_pool:                # the attention-pooled solver, shared by the
+                               # FROZEN attention probe
+                               # (src/probe/attention_probe.py) and by the LP
+                               # stage of the attention-pooled fine-tuning arms
+                               # attn_ft / attn_lp_ft
+                               # (fine_tune.AttentionPooledClassifier), which
+                               # call the same solve() on final-layer states.
+                               # One block, so the frozen and fine-tuned
+                               # attention arms cannot be fitted under
+                               # different settings. The FT phase itself uses
+                               # full_finetune above: the query trains at that
+                               # single matched learning rate, and lp_lr /
+                               # lp_steps govern the LP stage only.
+  init_scale: 0.01
+  lp_lr: 1.0e-3
+  lp_steps: 500
+
+  # --- the query penalty -----------------------------------------------
+  # Defaults here are OFF, so `attention_probe`, `attn_ft` and `attn_lp_ft`
+  # take the original free-query path unchanged. The one derived arm
+  # (shrunk_attention_probe) flips them in its own fitter
+  # (src/probe/__init__.py), which is the only place it differs.
+  q_l2: 0.0                    # L2 on the query. 0 = the published arm.
+  q_l2_select: false           # pick q_l2 on folds inside the training pool
+  q_l2_grid: [0.0, 0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0]
+                               # FIXED, not searched. Spans "unregularized" to
+                               # "query pinned near zero, i.e. mean pooling";
+                               # 3.0 is the value the 2026-08-27 held-fold
+                               # diagnostic found for llama, and it is in the
+                               # grid rather than in the config so that the
+                               # selection rule, not that diagnostic, picks it.
+  q_l2_inner_folds: 3          # inner folds scored per candidate. 3 of the 9
+                               # folds in a training pool: enough to rank eight
+                               # candidates, 24 extra solves per outer fold.
+
+sae_attention:                 # sae_attention_probe: a learned query over the
+                               # pinned dictionary's per-token latents
+                               # (src/probe/sae_attention_probe.py). Query and
+                               # step budget come from `attention_pool` above,
+                               # so the pooling axis is the same size in the
+                               # raw and SAE bases.
+  l1: 0.65                     # L1 on the READOUT, applied as a proximal
+                               # soft-threshold after each Adam step. NOT
+                               # tuned on an outcome: chosen so the fitted
+                               # readout reaches the sparsity `sae_probe`
+                               # reaches on the same data — 1,075 non-zero
+                               # coefficients against its 1,069 of 16,384 —
+                               # so the two SAE arms are compared at matched
+                               # readout complexity. Held-out AUROC peaks
+                               # elsewhere (l1=0.3, 30% density, 0.9533 on
+                               # fold 0 against 0.94 here); picking that would
+                               # be tuning on the held fold and is refused.
+
+# --- v3 white-box audit ------------------------------------------------------
+# The working-layer probes remain at round(0.65 * depth); these are independent
+# residual-stream layers fixed by published SAE availability.
+sae:
+  gemma-2-2b:
+    # Repinned 12 -> 17 on 2026-08-26. Layer 12's dictionary could not support
+    # the construct: a blind re-curation there accepted 1 of 161 candidates and
+    # rejected 55 as lexical detectors (feature 383 peaks on the bare token
+    # "alone" in 27 of its top 30 contexts). The same rule at layer 17 yields
+    # usable affective features. Cache layer is 18 = 17 + SAE_CACHE_OFFSET.
+    layer: 17
+    release: gemma-scope-2b-pt-res-canonical
+    sae_id: layer_17/width_16k/canonical
+    neuronpedia_source: 17-gemmascope-res-16k
+    neuronpedia_model_id: gemma-2-2b    # coincides with the registry key here
+  llama31-8b:
+    # Resolved 2026-08-20 from the installed sae-lens 6.49.1 registry
+    # (pretrained_saes.yaml: llama_scope_lxr_8x -> repo fnlp/Llama3_1-8B-Base-LXR-8x).
+    # d_sae 32768 on 4096 dims = 8x expansion, matching Gemma Scope's 16k on
+    # 2304 (7.1x), so the two backbones are audited at comparable dictionary
+    # width rather than at whatever each release happened to publish.
+    #
+    # Pre-registered mismatch, same shape as Gemma's: Llama Scope was trained on
+    # meta-llama/Llama-3.1-8B (BASE) while this study fine-tunes -Instruct.
+    # Record per-post reconstruction rel-L2 so the mismatch stays visible.
+    #
+    # NOTE the cache off-by-one: hidden_states[k] is the output of block k-1, so
+    # blocks.23.hook_resid_post is cached as layer 24, not 23. Confirm with
+    # src.probe.sae_probe.reconstruction_diagnostics (reconstruction error is
+    # minimal at the SAE's true site) before trusting any number.
+    layer: 23
+    release: llama_scope_lxr_8x
+    sae_id: l23r_8x
+    neuronpedia_source: 23-llamascope-res-32k
+    neuronpedia_model_id: llama3.1-8b   # Neuronpedia's id, NOT the registry key
+
+audit:
+  eval_posts_per_fold: 100
+  hook_parity_atol: 1.0e-5
+  word_score_aggregation: max
+
+faithfulness:
+  # One faithfulness INTERVENTION, scored against a count-matched control so
+  # the off-distribution cost is paid by target and control alike. Two metrics
+  # run it, differing only in who ranks the words:
+  #
+  #   word_delete        removes the top-ranked words from the TEXT and
+  #                      re-scores. Direct and word-native, but a shortened
+  #                      post is off-manifold, which is what the count-matched
+  #                      control is for.
+  #                      - src.stage2.word_deletion ranks by the method's OWN
+  #                        attribution (is the explanation self-faithful?).
+  #                        Its shared-ranking companion, which ranked by the
+  #                        frozen clinical-SAE manifest, was removed 2026-08-28.
+  #                      Both write `ranking_source` on every raw row, so the
+  #                      two are never pooled. `interventions` below names the
+  #                      intervention, which is the same one either way.
+  #
+  # The SAE own-feature knockout was removed on 2026-08-26 (quarantine:
+  # ~/lonxplain_removed_saefaith_20260826). It ablated decoder directions, which
+  # advantaged sae_probe by construction — its logit is exactly linear in the
+  # latents removed, while every other method reads the raw residual and keeps
+  # an unremovable reconstruction-error term. Activation patching, which briefly
+  # replaced it, was dropped from the study on 2026-08-26; `interventions` has
+  # listed word_delete alone since.
+  k_grid: [1, 2, 5, 10, 20, 50]
+  interventions: [word_delete]
+  random_draws: 5
+  controls: [random_words]
+  aopc_method: trapezoid
+  small_logit_gap_warn: 0.1
+
+encoder_finetune:              # MentalBERT reference arm (PLAN.md §2) — NOT a 2x2 cell
+  lr: 2.0e-5                   # the standard BERT recipe, not the 8B arms' 1e-5:
+  weight_decay: 0.01           # a 110M encoder at 1e-5 for 600 steps is undertrained,
+  warmup_ratio: 0.1            # and a handicapped baseline flatters the comparison
+  epochs: 4
+  max_steps: 800
+  min_steps: 50
+  batch_size: 16
+  max_len: 512                 # clamped to the model's own position table
+  grad_clip: 1.0

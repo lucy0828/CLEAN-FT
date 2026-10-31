@@ -1,0 +1,87 @@
+# Every prompt text in the study. Loaded by src/baselines/prompting.py, which
+# SHA-256-pins the shared construct block and the Stage 3 turn block: editing
+# those here without updating the digests in prompting.py fails loudly at
+# import.
+#
+# `clinical_rubric` is Stage 1's construct, applied to written social media
+# posts that are labelled against it.
+#
+# `screening_prompt` is Stage 3's, and it is DELIBERATELY LESS STRICT and much
+# shorter. Stage 3 is not a classification benchmark: it decides which
+# conversations a psychiatrist reads. It carries the construct's definition
+# sentence and no annotation rules at all -- none of Stage 1's four exclusions
+# -- and it asks one binary question of a whole conversation phase rather than
+# a graded contract of one turn. A ~950-character rubric against a ~44-
+# character turn largely reports the template; this prompt is ~450 characters
+# against a whole exchange.
+#
+# Both texts are SHA-256-pinned in src/baselines/prompting.py; neither may be
+# edited here without updating its digest.
+
+clinical_rubric: |-
+  CLINICAL DEFINITION OF LONESOMENESS
+
+  Lonesomeness is an unpleasant emotional response to perceived isolation through mind and character, especially in terms of concerns for social lifestyle.
+
+  To mark lonesomeness present you must identify at least one of its three core dimensions.
+  Social loneliness: the perceived absence of a supportive social network or group.
+  Emotional loneliness: the perceived absence of a close, intimate partner, companion, or relationship.
+  Existential loneliness: a deep, subjective feeling of disconnection from the broader world or humanity.
+
+  STRICT ANNOTATION RULES FOR DIFFICULT CASES
+
+  1. Temporal rule (lonesomeness in the past). Prior or historical experiences of isolation count as lonesomeness present if they indicate ongoing distress or a lingering relational void. Positive affect or a celebratory event in the text (for example, celebrating the New Year with friends now) does NOT cancel out the state if a lingering relational void is expressed.
+
+  2. Appraisal rule (events versus appraisals). Interpersonal events (for example, breakups, divorces, living alone, graduations) must NOT be assumed to indicate lonesomeness. They are marked present only when accompanied by an explicit negative relational appraisal: expressing a void, missing someone, regret, or a perceived discrepancy between desired and actual ties.
+
+  3. Interpersonal conflict exclusion. Lonesomeness is not the same as general interpersonal conflict. Family arguments, fights with a spouse, and general stories of conflict, however distressing, are marked absent unless the speaker explicitly articulates a relational void or perceived isolation.
+
+  4. General distress and depression exclusion. Do not conflate general mental distress or somatic symptoms with lonesomeness. General depression, insomnia, exhaustion, physical fatigue, stress, or self-obsession without a clear interpersonal void or social isolation are marked absent.
+
+detection_task: |-
+  You are an expert clinical psychologist and NLP annotator identifying lonesomeness as an interpersonal risk factor in social media narratives.
+
+  Read the post below and decide whether lonesomeness is present or absent.
+
+  Work through these steps in order.
+  1. Circumstantial causes: extract the spans showing the trigger or circumstance (for example, bereavement, a breakup, living alone).
+  2. Lonesomeness consequences: extract the spans where the writer describes the emotional or cognitive consequence of lonesomeness (for example, feeling lonely, having nobody to talk to).
+  3. Dimension mapping: identify which of the three dimensions are active.
+  4. Rule application: apply the temporal, appraisal and exclusion rules to reach the final determination.
+
+  Every extracted span must be quoted exactly from the post. Extract no span for a step that has none.
+
+detection_output: |-
+  Answer with a single JSON object and nothing else, with these keys in this order:
+  {"thought_process": brief clinical reasoning naming the rules and exclusions you applied, "extracted_causes": [spans quoted exactly from the post], "extracted_consequences": [spans quoted exactly from the post], "active_dimensions": a list drawn from "Social", "Emotional", "Existential", or ["None"], "rules_triggered": {"temporal_rule_applied": true or false, "appraisal_rule_applied": true or false, "conflict_exclusion_applied": true or false, "depression_exclusion_applied": true or false}, "lonesomeness_label": "Present" or "Absent"}
+
+  Post: {post}
+
+screening_prompt: |-
+  CLINICAL SCREENING DEFINITION OF LONESOMENESS
+
+  Lonesomeness is an unpleasant emotional response to perceived isolation through mind and character, especially in terms of concerns for social lifestyle.
+
+  You are an expert clinical psychologist screening spoken conversations between older adults and a wellbeing chatbot. Read the exchange below and decide whether the older adult's reply expresses lonesomeness under the screening definition above.
+
+screening_output: |-
+  Answer 1 if the older adult expresses lonesomeness anywhere in this exchange, and 0 if not. Reply with that single digit and nothing else.
+
+cleanup_task: |-
+  You are cleaning an automatic speech-to-text transcript of a spoken conversation between an older adult and a wellbeing chatbot, so that a clinician can read it without stumbling over recognition noise.
+
+  You will be given the messages of one conversation phase, numbered in order. Return one cleaned text per message, same count, same order, same speaker.
+
+  Rules.
+  1. Remove transcription noise only: filler sounds (um, uh, umm, erm, ah, mm, hmm), stutters and false starts ("I I I went" -> "I went"), and words the recogniser plainly duplicated ("get get her" -> "get her").
+  2. Never add, complete, infer or reword content. Do not finish a cut-off sentence, do not fix grammar, do not standardise dialect, do not summarise, do not translate. A garbled fragment stays a garbled fragment.
+  3. Keep meaningful repetition. "No one, no one at all" is emphasis, not noise, and stays.
+  4. Keep every content word the speaker said, including hesitant, vague or self-contradicting ones. When you cannot tell whether something is noise or speech, keep it.
+  5. Punctuation and capitalisation may be normalised so the line reads as a sentence. Nothing else may change.
+  6. A message that is only filler becomes an empty string. Never drop a message from the list.
+
+cleanup_output: |-
+  Answer with a single JSON object and nothing else:
+  {"messages": [{"index": the message number you were given, "text": the cleaned text}]}
+
+  Return every message you were given, in order.

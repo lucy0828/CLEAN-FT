@@ -1,0 +1,459 @@
+phase_id,corpus,conversation_id,type,nickname,date,n_user_words,text,annotator1_label,annotator1_explanation,annotator1_span_chars,annotator1_n_spans,annotator1_unlocated_quotes,annotator2_label,annotator2_explanation,annotator2_span_chars,annotator2_n_spans,annotator2_unlocated_quotes,agreed
+deployment1_61da44a2_intervention,deployment1,61da44a2-42b3-4132-8824-0e31ff99a377,intervention,US-3001,2026-01-13,187,"That's a good idea.
+No. I'm going over to the church for electio divina. This evening.
+I do.
+Do I? Yes. I do. I haven't had one in a couple of days. But I will this evening.
+Yes.
+I've been
+I've been staying hydrated.
+I was watching the news, and the gray haired breast terminal is going to reopen. At [PLACE], which is really good news for people who travel on the bus.
+When you say you're ending the intervention, now, does that mean you're ending the conversation?
+Well, I can't think of anything else that I wanna talk about today.
+It's been a quiet day. My medication for depression came one time.
+I will
+And the UPS driver that brought it is a very nice young man, and he's gonna be leaving UPS soon. So I'm ordering stuff so I get see him before he leaves.
+I enjoy seeing him. I think we're in the perch.
+I'm going to miss him when he's gone.
+How have you been?
+I think I'm going to end our conversation now. [NAME]. It was good talking to you.",1,I'm going to miss him when he's gone.,"[[811, 848]]",1,0,1,I'm going to miss him when he's gone.,"[[811, 848]]",1,0,True
+deployment1_9cd2a0a0_assessment,deployment1,9cd2a0a0-58d2-4f7e-8a86-27aa0476907a,assessment,US-3003,2025-12-14,89,"I didn't open it yet.
+Not enough time. Not enough time. Not as much time as I would like. He works. He's a teacher. And he works a lot. So but when I do have an opportunity to spend time with him, I'm very happy to see him.
+Yes. I have a daughter, a son-in-law, and a son.
+Well, not really. Like a slow day.
+Yes. I'm going with my sister to get my haircut and then I have a couple of holiday parties that I will be attending.",1,"Not enough time. Not enough time. Not as much time as I would like. He works. He's a teacher. And he works a lot. So but when I do have an opportunity to spend time with him, I'm very happy to see him.","[[22, 196], [197, 223]]",2,0,1,"Not enough time. Not enough time. Not as much time as I would like. when I do have an opportunity to spend time with him, I'm very happy to see him","[[22, 38], [22, 38], [56, 89], [143, 196], [197, 223]]",5,0,True
+deployment1_59b40405_checkin,deployment1,59b40405-13f0-4b50-be49-6c0a37d1c7dc,checkin,US-3005,2025-12-27,46,"I'm pretty done with talking to you. Because this damn thing is not working properly.
+A misunderstand with my friend, and I'm not in a good mood.
+Me being me.
+I'm ready to say good night to you so I could go on about my business.",0,,[],0,0,0,,[],0,0,True
+deployment1_e4b1f055_intervention,deployment1,e4b1f055-3ffe-46c9-9603-3068406f66aa,intervention,US-3005,2026-01-05,79,"Yes. I did. Do some walking earlier today.
+I walk every day normally.
+There's not that many people that I associate with
+I did call my aunt in [PLACE] today.
+I told you once before, I am not much of a talker.
+I'll try that.
+I was up early here. Today.
+So I took a net. This afternoon.
+Okay. I am gonna say good. Night. Hope you have a pleasant day tomorrow, and I will talk to you later.",1,There's not that many people that I associate with;,"[[70, 120]]",1,0,0,,[],0,0,False
+deployment1_bf9a5e50_intervention,deployment1,bf9a5e50-291e-4e08-91e3-ab96fdf32f16,intervention,US-3005,2026-01-12,117,"Yes. I have did a little reading.
+I'm also watching the playoffs. On TV.
+Well, we had chicken wings and beer.
+So it was in three. Pleasant evening.
+I plan on doing that.
+Yes. I'm not much of a bit drunker, but one or two bottles is my limit.
+Well, my plans for tomorrow is to take my girlfriend's car and get it washed. And she's going home. So I have to prepare myself for being at my house alone.
+Yes. I think I will do that.
+I hope you have a pleasant evening. Because I am going to go back to watching the playoffs. So you have a good evening, and I'll talk to you tomorrow.",1,So I have to prepare myself for being at my house alone;,"[[342, 398]]",1,0,1,prepare myself for being at my house alone.,"[[355, 398]]",1,0,True
+deployment2_af7dcf75_assessment,deployment2,af7dcf75-419f-489a-b5d3-256a595fb04f,assessment,US-4000,2025-12-25,258,"Yes. My neighbor visited with me today.
+And she's coming over and have dinner with me tomorrow.
+Well, since it's Christmas, and I don't have anybody else, I'm very happy.
+No. I have to because of my health, I must purchase the food.
+Already cooked.
+Well, she's relatively new. To me. And she has an interesting conversation. About the activities she does.
+Yes. How she shops with her shopping cart.
+It was
+It is.
+Yes. That she would go so far with a shopping cart. A push cart, a small one.
+Yes.
+Yes. She's independent. When she had to go to the store, she didn't wait for a ride. She pushed her cart and caught the bus.
+Well, it makes me want to do the best I can.
+Well, I'm having company for dinner. And that's big.
+Tomorrow, I will have two other people too.
+I feel fine. I wish I were healthier so I could do a better job, but I'm pleased with the best I can do.
+No. I have help coming.
+Well, I try not to because they're bittersweet. And I came from such a large family. Every Christmas was lovely. And full of wonderful memories.
+Yeah. One time, when I was twenty one, I boiled an egg. And I burned the egg, the pan in my hand. And when I was 25, I put a feast on the table. And my mother came. She thought it was very nice I had learned to cook. And it came natural. Are you there? Are you there?",1,"Well, since it's Christmas, and I don't have anybody else, I'm very happy; Well, I'm having company for dinner. And that's big;","[[96, 101], [102, 123], [124, 154], [155, 170], [96, 101], [672, 718]]",6,0,1,I  don't have anybody else,"[[128, 154]]",1,0,True
+deployment2_ff8ffab9_assessment,deployment2,ff8ffab9-63c3-4f3b-9977-e4f2ea542c3d,assessment,US-4000,2025-12-25,244,"Well, I don't know. That's just what I felt when you asked me. I felt as if
+People have made commitments and have not kept them. Today is Christmas. And they are supposed to be doing small things for me. And I have not. They've called, but I have not seen them yet.
+Well, believe it or not, people have told me that's a very attractive color on me. But I don't when I put it on, I don't put it on for that reason. I just I don't have on I have them read today because it's Christmas.
+But I'm just disappointed with people. And I because I'm crippled. I need them to do things, and they haven't come.
+Well, I've done some lovely components of Some people are close to me, and people are far away from me. That made me very happy.
+I need some help that is more responsive to me. And that's what I'm looking forward to. My hope has issues that make me feel as just I'm the cause of them. And I'm not.
+Well, a little later on, some more people will do you. That would make the difference.
+Yes.
+A positive future.
+Today, I'll listen to it. Macy's not Macy's. Business grade. And that was very helpful to me. That got me into a very good move. And I have been working hard not to let anybody restore my joy. Are you there? Are you there?",1,"But I'm just disappointed with people. And I because I'm crippled. I need them to do things, and they haven't come; Well, a little later on, some more people will do you. That would make the difference.","[[484, 576], [577, 599], [0, 5], [904, 922], [923, 984]]",5,0,0,,[],0,0,False
+deployment2_ffff85e6_assessment,deployment2,ffff85e6-ac84-49e2-ae9e-4ddf3fae8bf2,assessment,US-4000,2025-12-26,328,"Well, it's calm. It's posh, both of them.
+It's calm, and it's a heavy cloud. But it's dark. All around.
+Usually, isolating. I have plans for people to stop by today. But if they don't stop by, I'm not gonna be upset.
+Yes.
+Yep.
+I don't fear of wait a minute. I can't understand this. I don't feel isolated. I feel as if I might be isolated if they don't show up. If they show up, I won't feel isolated.
+I never said it wasn't supposed to be a bad day. I said that it is the weather is bad today. It's very, very dark and extremely cold outside.
+Yes.
+How would I respond to the weather?
+I never heard what weather talk before. I don't know.
+Getting on the phone
+Oh, I could walk. We used to go for walks in the snow. We'd go to different restaurants. So clubs or something. In the snow. We walk when I was in my thirties and forties.
+White I had a white for a coat. I used to
+We can move on.
+Well, I like to play a card game called Skippo. And if I could play some cards, which I had done earlier, if I could do some later, if it was snow, that would make me happy too. And the people who are coming, are card players. So that should be a nice evening.
+And I've got
+Oh, yes. Oh, yes.
+Oh, yes. I've thought about them, and I feel better.
+Alright. [NAME],
+So for me And I don't
+Well, I just I always And I missed those crowds. Three four seven not around now. And [NAME], one called me yesterday with me. Merry Christmas. But they're not around. And Sometimes it would be to play cards, dance, listen to music, or sometimes it'd be to go walking. But we all like to go walking if it was early. But we made the best of the situation.",1,"Usually, isolating. I have plans for people to stop by today. But if they don't stop by, I'm not gonna be upset; I don't fear of wait a minute. I can't understand this. I don't feel isolated. I feel as if I might be isolated if they don't show up. If they show up, I won't feel isolated; Well, I like to play a card game called Skippo. And if I could play some cards, which I had done earlier, if I could do some later, if it was snow, that would make me happy too. And the people who are coming, are card players. So that should be a nice evening; Well, I just I always And I missed those crowds. Three four seven not around now. And [NAME], one called me yesterday with me. Merry Christmas. But they're not around.","[[104, 112], [113, 192], [193, 216], [227, 378], [379, 401], [0, 5], [896, 969], [970, 995], [996, 1021], [1022, 1037], [1038, 1098], [1099, 1150], [0, 5], [1280, 1367], [1368, 1441]]",15,0,1,"isolating, I have plans for people to stop by today, I feel as if I might be isolated if they don't show up,  I missed those crowds, Three four seven not around now, they're not around","[[113, 123], [124, 165], [306, 361], [1300, 1322], [1323, 1355], [1422, 1441]]",6,0,True
+deployment2_3a88a6c3_assessment,deployment2,3a88a6c3-e414-48b1-927a-22bea5aaabc3,assessment,US-4000,2025-12-27,246,"It feels like makes me feel like I don't wanna do anything.
+Physical support. Hurt a lot now.
+My arthritis is bad up.
+Yeah. We talk.
+We know there's only so much we can do for each other.
+If I didn't hurt,
+Yeah. If I had a friendly person visiting me, that would help.
+Yes.
+Well, when I have to hang up, I'll get on the phone.
+Are you there?
+I have the time. I have the time. I thought you were gone. We're in the trends. Nice to have.
+That is nice to have friendly people to stop by. And visit with you occasionally.
+Well, I live in a community, and it's very nice. It's set I'm not able to go out into it. Because of my physical limitations. But we have parties here. We have dinners here. We have recitals. We have game nights. We have all sorts of things, but I don't feel up to going.
+I love Trint. I love playing card games.
+Yes. I enjoy. I have a new game called Skippo, that I can play at home but I also enjoy a game called Bidwist. And one called pinochle. Those are popular games. And I'm a champion at them. So I do find them challenging. I just don't feel up to going or org I can organize one. But I don't feel up to it. Are you still there?
+Wait a minute. Excuse me. Repeat yourself, please. Repeat yourself, please.",1,"Yeah. If I had a friendly person visiting me, that would help; That is nice to have friendly people to stop by. And visit with you occasionally;","[[206, 251], [252, 268], [436, 517]]",3,0,1,"If I had a friendly person visiting me, that would help","[[212, 251], [252, 268]]",2,0,True
+deployment2_f3d8b50d_checkin,deployment2,f3d8b50d-4aac-430d-980f-5f932bb83a04,checkin,US-4000,2025-12-28,172,"I haven't been feeling good. Of a holiday travel. Dibolo matter
+Hasn't been going too well. Such Gas leaks there. On a major [PLACE] freeway shut down. Once again on the busy eye five. That wasn't the case last night. Dead at 91.
+Good evening, everyone. Joining us on this Sunday. We begin tonight in [PLACE] where this one person was killed and covered three days. Something's not right. I have not said those things.
+Yes. I feel like just sleeping. Out the skies just before noon today.
+I have an appointment Wednesday.
+Well, yeah. I have a group, I'm in group therapy. Then I have a retired mental health nurse girlfriend, a retired physician boyfriend, and I have several people I can talk to. But right now, everybody's busy doing different things, and I have to be understanding.
+Yeah. Yes. Commitment. Answer this. Yes.
+I would be winter. Are you there?
+Are you there?
+Black.
+I feel empty today.
+And it's real cold today.
+Cloudy. Cloudy. Expecting snow or rain.",1,"Well, yeah. I have a group, I'm in group therapy. Then I have a retired mental health nurse girlfriend, a retired physician boyfriend, and I have several people I can talk to. But right now, everybody's busy doing different things, and I have to be understanding; I feel empty today;","[[86, 91], [528, 549], [550, 625], [626, 656], [657, 712], [713, 753], [754, 785], [883, 902]]",8,0,0,,[],0,0,False
+deployment2_8009ee67_assessment,deployment2,8009ee67-b883-421d-af17-7cac75cdd8e6,assessment,US-4000,2026-01-03,291,"A group. Of people.
+Community is composed of people who have
+things in common. They like some of the same things and dislike some of the things same things and participate in similar activities.
+To play cards.
+Yes. It makes me feel like I'm a part of things.
+Well, I'm getting phone calls and we are thinking about next week. Activities. And the holiday is just about over. And that we can go back to a regular routine.
+Yes. I'm a make have doctor's visits. And appointments.
+Got it.
+I was just going to tell you that these activities would bring me in touch with people more.
+What does that mean?
+You asking questions.
+Communicating is good.
+People have the same interest.
+Share an interest is good.
+And because I can't write like I used to like to write. But I like talking about things that I've done in the past, and hearing about other people's things, particular when they resemble my activities.
+And after we got there, having discussions about the things we were discussing This is years ago.
+Well, we talked about a house. We don't like going out now. We usually like going out in the snow.
+Well, first of all, it's given me something to talk about that's interesting and it has defined me because people know who I am by what I tell them. Because they certainly can't tell about what I do. Are you there? Are you there?
+Do you have any more questions?
+It's cold. Here in [PLACE]. I didn't realize how much cold weather they have here. And the building is very warm.
+I don't go outside. Any more than I have to. But I enjoy inside. Are you there? Are you there?",1,I was just going to tell you that these activities would bring me in touch with people more.,"[[484, 576]]",1,0,0,,[],0,0,False
+deployment2_7533566f_assessment,deployment2,7533566f-1031-4495-9695-058f32f588e2,assessment,US-4000,2026-01-04,252,"Not really. Sometimes there's some popular music.
+Mhmm.
+What did you say?
+And what else did you say?
+Yeah. Like, fast happy music.
+Well, now I'm glad Christmas is over.
+Because the people who usually help me out are not available.
+Why are you taking so long today?
+I'm not listening to it anymore. Because it just make me feels a bit it's kind of bittersweet memories.
+Not really. Yes. I did. Yes. I did. I've shared some with somebody who liked jazz. Yes. I did. I shared some. It was very nice too.
+Yes. It was.
+Do we have to talk about them? It makes me feel sad to talk about them.
+Not particularly. I just play jazz, popular music. And whatever is on, I listen to.
+I listen to more television than I do television shows than music.
+Christmas dinner. Christmas is way over. Way past. It's past New Year now.
+No. I haven't been playing a lot of music I've been listening to game shows.
+Not really.
+Of course. Of course, they remind me of different times. And if they are too sad, I try to move on.
+No. I don't have a special song. Not even thinking about it.
+Yeah. Before, you called me I was having difficulty. I mean, before I reached you, I was having difficulty reaching you. So I'm gonna try to get that straightened out tomorrow. And the other thing I learned that you ask keep asking questions. About that make me feel sad sometime.",1,Because the people who usually help me out are not available.,"[[169, 230]]",1,0,1,It makes me feel sad to talk about them.,"[[545, 585]]",1,0,True
+deployment2_c977661a_assessment,deployment2,c977661a-b4ba-4782-b209-ee9dfec4f3d7,assessment,US-4000,2026-01-05,312,"Yeah. First of all, when I don't sleep, I'm afraid to walk because I have a balance problem. My leg's still weak and everything. And I tossed and I turned, and I don't know why I couldn't sleep.
+But I was sleepy when I went to bed last night, so I was surprised. And I was concerned because my aide was supposed to be here at nine o'clock. And I found out around 10:30 that she would be here by twelve. Or something like that. But that I was frustrated over the circumstance of her not knowing she was supposed to come
+Mhmm.
+What?
+Yeah. My back hurts more when it happens. And I just feel down.
+I feel like I don't even do anything. I feel very tired. Don't want to do anything.
+Yes.
+Well, this too shall pass.
+Yes. I'm giving it to myself, but that doesn't make me happy.
+If I had some company, upbeat gentleman's personality would would do it now.
+Yeah. If we were the right person,
+Well, it's pretty near my bedtime. So just to go to bed early might make me feel a little better. I might watch a show on TV in the bed.
+Thank you.
+Oh, you're not gonna talk anymore?
+We don't wanna talk anymore.
+No. I asked you no. I asked you if you are telling me you don't want to talk. Do you want to talk some more? I do.
+The weather is really, really taking a toll on everybody. And I can't go out and do things because it's just too uncomfortable. I'm in too much pain. But that's not helping me to feel any better. I'm looking forward to the end of the week because it's supposed to go up about 20 or 30 degrees. And be more comfortable. But that's a barrier. What is our topic for today?",1,"I feel like I don't even do anything. I feel very tired. Don't want to do anything.; If I had some company, upbeat gentleman's personality would would do it now. The weather is really, really taking a toll on everybody. And I can't go out and do things because it's just too uncomfortable. I'm in too much pain. But that's not helping me to feel any better.","[[595, 678], [773, 795], [796, 870], [1235, 1407]]",4,0,1,"If I had some company,","[[773, 795]]",1,0,True
+deployment2_3811eb3e_assessment,deployment2,3811eb3e-c644-4db3-9be4-ca72f7bb826d,assessment,US-4000,2026-01-06,296,"Yeah.
+But today, there are a lot of serious issues I can't do anything about.
+Next, today. No. I've been too busy to listen to music today.
+I've been on the phone all day today.
+I'm going to put on Dancing with the Stars so I'll see and hear all the music.
+Yes.
+I don't know. It seems people's conversations are more uplifting.
+And they usually have any experience to share about that music.
+Mhmm.
+Yes.
+I don't think about him.
+Well, I saw The Sound of Now I like that music.
+Oh, there's so many.
+The hills come alive. Is that in that I get the music from The Sound of Music and [NAME] mixed up.
+I don't remember then.
+No.
+No. I think I've given them proper honor. I've called everybody, and I did what I was supposed to do.
+My aids She says she's not coming back at the end of the week. And I had just fallen in love with her, and begun to understand her. And I feel sad about that. That has me very, very upset.
+Because I was keeping her things.
+Oh, yes. Yes.
+I have a therapy. A psychotherapy session tomorrow too. Scheduled. So I'll get a chance to talk about it all day tomorrow.
+I had a nephew that had surgery and I just found out he is in recovery, which is an excellent bit of news. But that hit me sort of torn up today too. And those are the three big things. Plus, physically, I don't feel good. At all.
+No. But I'm gonna go to bed early. And watch Dancing with the Stars. So I'll have a relaxed evening. I'm getting ready to have dinner now.
+Thank you.
+Do you have any more questions?",1,"My aids She says she's not coming back at the end of the week. And I had just fallen in love with her, and begun to understand her. And I feel sad about that. That has me very, very upset.","[[725, 827], [828, 901], [902, 913]]",3,0,0,,[],0,0,False
+deployment2_39d4a01c_assessment,deployment2,39d4a01c-3396-4a38-9f21-b2b74f9b5fc7,assessment,US-4000,2026-01-08,376,"Well, friendships where you feel commitment and you receive back from the first other person things that they have committed to.
+No. I have not. In fact, the ones that I had supporting me, either out of the area or sick.
+Yes. I've had a couple of friends that I talked with on the phone. And relatives that I talked with on the phone. And they have been kind and encouraged me to go on. But basically, my group is not doing it well.
+I have some talk to. I have somebody. I have a psychologist to talk to.
+Just stop by and just have a soda or something. To drink. And maybe watch a TV show together. Or play some cards.
+Light brown. Excuse me. My mood is light brown.
+I thought it said light gray. And then also Okay. I said my color was light gray.
+I really don't know the answer to that. I don't understand the question.
+Oh, they, I've gotten a couple of nice calls this morning. And I have somebody this evening to come over here and help me. And she's very positive. So I'm looking forward to that.
+Well, we are supposed to be having warm weather for the next few days, and the weather has been horrible. And I just expect some update interaction in the next few days. I probably will go out in the area but I'm not, this isn't transitional, but it feels like it would be because it's only we've been so cold. This is a transition. Even if it's only gonna last three or four days, Yeah. I usually hit that. Are you there? Or did you say, are you there? Are you there? No. That's No. That's what we can add on that. That's what? Does this say? That's all? Does this happen to you often where we just kinda Yeah. And I saw you there and you just won't see anything, and I touch another button and start again. Okay. We see what I mean. What's interesting. I'm not computer savvy, so, you know, everything's did something wrong in the end. K. Alright. So what I'm gonna do is I'm gonna disconnect then we're gonna reconnect, and I wanna see whether",1,"No. I have not. In fact, the ones that I had supporting me, either out of the area or sick; Just stop by and just have a soda or something. To drink. And maybe watch a TV show together. Or play some cards; Oh, they, I've gotten a couple of nice calls this morning. And I have somebody this evening to come over here and help me. And she's very positive. So I'm looking forward to that.","[[129, 153], [154, 188], [189, 220], [505, 618], [822, 825], [826, 831], [832, 1001]]",7,0,1,"the ones that I had supporting me, either out of the area or sick.","[[154, 188], [189, 220]]",2,0,True
+deployment2_c2e57c4a_assessment,deployment2,c2e57c4a-fb5c-4edb-913a-9543c42ee53b,assessment,US-4000,2026-01-16,186,"I want to go to sleep. That seems to me that might be best for me. I'm tired. I'm overwhelmed.
+No. Just go to sleep. I'm getting ready to go to bed. I'm tired.
+I wouldn't like it. I wouldn't do it now.
+I can't remember. I feel darker than usual. I got stood up today. That's a terrible feeling to be sick and you can't move and nobody around you to help you.
+Oh, I do have my therapist. I talked to her. I talked to her last night, and I talked to her today. Tonight.
+Will you repeat that, please?
+Who is connect?
+Yeah. No. Not today. I'm tired. I'm physically exhausted.
+I didn't have help today. I helped this evening, but I had no help all day. And I'm tired mentally and physically from it.
+The overall lack of help and support that's weighing on me.
+I think it would understand and say, okay.
+Go to bed.
+Yes. Drink a soda.
+I learned that I would learn I learned that I am unusually tired today. Much more tired than usual. Okay?
+Thank you.",1,"I can't remember. I feel darker than usual. I got stood up today. That's a terrible feeling to be sick and you can't move and nobody around you to help you; I didn't have help today. I helped this evening, but I had no help all day. And I'm tired mentally and physically from it; The overall lack of help and support that's weighing on me.","[[202, 358], [572, 620], [621, 694], [695, 754]]",4,0,1,"I got stood up today, lack of help and support that's weighing","[[246, 267], [707, 747]]",2,0,True
+deployment2_f6c58151_assessment,deployment2,f6c58151-ad41-4e8d-b62b-254b3d7e24a1,assessment,US-4000,2026-01-18,309,"Okay. Alright. I'm on another call. Okay.
+Ring?
+I have another call.
+Alright. I'm ready.
+Winter does not feel like the right season. I mean, I have to accept what I get.
+Yes.
+Negatively. I haven't been to interested in people recently.
+Well, I haven't been interacting with her recently.
+Usually verbal. And she treats me nicely. And she's always trying to accommodate my needs.
+No. No. It makes me want to stay in the bed.
+That quality helps me to strengthen my bond with everybody. People nice to me and nice back. That strengthens the bond they're in.
+I have a call.
+Hello? Hello? Hello?
+Yes.
+What does Walmart sell?
+Yeah. I'll do it myself.
+So that's alright. Don't get me anything to eat. Did you get chips? Okay. No. Don't get me anything to eat. That's alright. I'll find something here if I was. Alright then. And you can come in come on there. Right? Alright.
+I'm here now.
+I'm ready. I'm ready. I'm ready to talk about friendship.
+No. That's been a general thing. The people that I with whom I interact have to be that way or I don't interact with them.
+No. Because of my living circumstance, no. I haven't been able to turn to somebody.
+I found some young people. That helped me. And then I called the companies and they sent people out
+No. It just made me feel frustrated. And happy that I got it done.
+Well, when they asked me my opinion, and they accept it, that makes me feel worthwhile? And, most of the time, if they don't we don't have a conversation because, it's not necessary to get frustrated again. And with the politics that are happening now, if people don't agree with me, I really can't have a conversation about it. Are you there? Are you there?",1,Negatively. I haven't been to interested in people recently; No. No. It makes me want to stay in the bed.; I haven't been able to turn to somebody.,"[[175, 235], [379, 423], [1107, 1147]]",3,0,1,"I haven't been to interested in people,  I haven't been interacting, I haven't been able to turn to somebody","[[187, 225], [242, 268], [1107, 1147]]",3,0,True
+deployment2_e6121fd0_assessment,deployment2,e6121fd0-2ab8-4507-b972-fc14960119ac,assessment,US-4000,2026-01-19,193,"Playing cards.
+It represents the snow outside. And I can't go out there.
+Well, it has defined the way I cannot go.
+Well, inner strength, well, inward be determined if we're going where our bodies are going outward. And if you can't do anything inward, you can't go outward, and you realize it that from the inward that you can't go, it imprisons you.
+I do that regular.
+Not really.
+It's so jalapeno.
+Nothing exciting going on in my life.
+No. The view. Did not calm the adult.
+Yeah. I did not use where it come. I used y'all. It's so dull. You don't feel like doing anything, so there's nothing
+Yeah.
+Well, I don't have anything I want to do. There's nobody I want to talk to or see. So it's just dull.
+I do. I do. I do all the time. Every week. Couple times a week.
+This morning, I was feeling low because I wasn't certain that the lady for the evening shift was coming in. And she had been out for a couple of days. And when she came in, that did help me feel better. You still there?",1,"Well, I don't have anything I want to do. There's nobody I want to talk to or see. So it's just dull.","[[73, 78], [606, 701]]",2,0,1,There's nobody I want to talk to or see.,"[[642, 682]]",1,0,True
+deployment2_5a7c9f20_assessment,deployment2,5a7c9f20-7afe-41a3-8bbf-cbf40db99dae,assessment,US-4000,2026-01-21,205,"Well, I have no energy. And my mood is low. I didn't get a phone call I was supposed to get this morning. And my moon hasn't been too too up.
+Well, I didn't have any energy anyway. And I didn't sleep well last night, but I woke up this morning and did not get a phone call regarding who's coming in to help me. And as a result, my anxieties were up pretty high this morning.
+It's making me very nothing to. I feel no energy whatsoever. And I'm in a negative mood. I'm not happy. I'm not sad, but it's not up. You know? It's a down mood.
+Oh, that would be lovely. It would just give me all sorts of energy.
+If I had some company,
+Well, I feel a little better because somebody did show up. Even though she, they didn't tell me until three hours after she got here. They didn't tell me that she was coming. I was waiting for her at 09:00. And she got here at noon.
+I realized that my sleep has been very affected by my aids. I didn't realize till today how sleepy I was when something happened with them. Okay? Are you there?",1,"Well, I have no energy. And my mood is low. I didn't get a phone call I was supposed to get this morning. And my moon hasn't been too too up.; If I had some company; Well, I feel a little better because somebody did show up","[[0, 5], [6, 141], [606, 628], [0, 5], [635, 687]]",5,0,1,"I didn't get a phone call I was supposed to, If I had some company,","[[44, 87], [606, 628]]",2,0,True
+deployment2_06e6a578_assessment,deployment2,06e6a578-9808-407f-8cf5-1caa7ee09b9b,assessment,US-4000,2026-01-25,261,"Well, because of where I live and because of my lack of mobility, I can't go out and people cannot get into me. It has not started. Yet. But they had given us the an inter a national alert. About the severeness of the storm. And they have recommended that we not even go out if we don't have to. So I feel people can't come into me, and I can't go out to anybody else. That's why I feel so confined.
+Well, I feel well, it's kinda cold in here too. So I guess that's where I feel like that. The brown is the color for and if I were going out, I wear fur.
+Right now, it represents that I'm not able to go anywhere. Confined, I feel horrible. My anxiety is so high and everything.
+I have done
+I have.
+You are receiving yourself Again,
+Can we move on?
+You keep saying the same thing.
+Well, the whole country is focused on this current storm that's coming tomorrow. And it's making me very anxious. There's nothing you can do about it, but at least I can just tell you that I'll be very I'm very anxious now and I'll be anxious tonight and tomorrow. They said it might take about a week to clear up.
+Are you still there?
+I'll listen.
+Yes.
+The table in front of me, the light in front of me, the refrigerator across from me, And my fingernails. And a table. I mean, a chair. I'm sorry. In that bag? Isn't that five things?",1,"because of where I live and because of my lack of mobility, I can't go out and people cannot get into me; Right now, it represents that I'm not able to go anywhere. Confined, I feel horrible. My anxiety is so high and everything.","[[6, 65], [66, 111], [554, 564], [565, 622], [623, 677]]",5,0,0,,[],0,0,False
+deployment2_d011e9f1_assessment,deployment2,d011e9f1-cc73-49c4-9867-a3aeba88cce6,assessment,US-4000,2026-01-30,119,"Okay.
+What did you say?
+Yes.
+They changed my whole feeling. I don't care about being with anybody. Or doing anything.
+Thank you.
+My health didn't come in all day. That depressed me more. I have evening help, but not day help.
+Yes. They're working on it.
+Yeah. I can't walk, so I have trouble washing myself and other things, preparing myself for day's activity.
+Yes. I have. Several.
+I found some that had been helpful to for me, but most of them want you to go there, and that's the hard part for me.
+Yes. Yes. Yes. I've done it.
+No. They're okay.
+Not really. Not tonight.
+Alright. Thank you.
+I had to do that for six weeks.",1,"They changed my whole feeling. I don't care about being with anybody. Or doing anything; My health didn't come in all day. That depressed me more. I have evening help, but not day help.","[[29, 117], [129, 207], [208, 225]]",3,0,1,I don't care about being with anybody.,"[[60, 98]]",1,0,True
+deployment2_4289ffb6_assessment,deployment2,4289ffb6-378c-44e3-9ecd-73971ad66f17,assessment,US-4004,2026-07-12,188,"Well, around 03:00. I spent time with my husband, and we had dinner together and did some housework together. It was very comforting to be with him.
+I don't know.
+I guess, to talk to my sister who I have a hard time reaching.
+I'm looking for my physical therapy appointment. I enjoy that. It helps my shoulder and my neck feel better.
+Yes. Well, they're just saying make me feel loved and wanted, that they wanna talk to me.
+I enjoy watching a good movie.
+Oh, a perfect day would be to meet with my two good friends, [NAME] and [NAME]. And have some lunch, sit at the lake, and talk. We don't get to see each other often at all.
+Oh, I made a really good dinner today.
+No. Not that I can take off.
+I get a little achy and tired. And I feel a little miserable.
+I go to my bedroom. And listen to some guided imagery.
+I share my feelings with my husband.
+No.
+No. Not right now. I'm pretty tired.
+Are you still there?
+Thank you.
+Okay. I'll talk to you later.",1,"Well, around 03:00. I spent time with my husband, and we had dinner together and did some housework together. It was very comforting to be with him.; Yes. Well, they're just saying make me feel loved and wanted, that they wanna talk to me. Oh, a perfect day would be to meet with my two good friends, [NAME] and [NAME]. And have some lunch, sit at the lake, and talk. We don't get to see each other often at all.","[[0, 5], [6, 49], [50, 148], [335, 345], [346, 396], [397, 424], [460, 516], [517, 556], [557, 573], [574, 628]]",10,0,0,,[],0,0,False
+deployment2_2030d582_assessment,deployment2,2030d582-d1bc-4acb-ae79-6db385ef994a,assessment,US-4004,2026-07-30,208,"I think there is a problem with our this chatbot.
+Nothing.
+Oh, well, that was a lot of fun. I remember wishing that I could be around him more often because he's just pure joy.
+Physically, a little bit
+worried because he is wild, and I am older and more fragile. And I didn't want him to hurt me.
+Mentally, I was glad to be with him. He has put pure joy.
+It did not really come into play.
+Yeah. I just love watching dance videos. And they just make me happy.
+It makes me smile. It makes me happy. I enjoy it.
+Well, one of the nurses that put the IV in my arm, I've met her before and she has a great personality, and definitely, we were laughing.
+She was eager to be helpful. And I was needing to be helped. And she had a very good sense of humor.
+Well, it's always nice to have somebody that is enjoyable rather than somebody that is not enjoyable. So I was just real happy to have her.
+Just the fact that she was a funny character.
+Just to keep my sense of humor, it's always best to look on the bright side and the humor in everything.",1,I remember wishing that I could be around him more often because he's just pure joy.,"[[92, 176]]",1,0,1,wishing that I could be around him more often,"[[103, 148]]",1,0,True
+deployment2_6f0b0cde_assessment,deployment2,6f0b0cde-7bda-434e-bd7e-35c55dcff3d0,assessment,US-4004,2026-08-08,217,"Good to know. Yeah. No. I don't know if I watched any of his other films.
+I like to multitask.
+Yeah.
+Feels productive.
+Well, it depends. Sometimes I feel like watching something about
+a thriller and sometimes a comedy.
+Oh, I guess, I have my husband here. And, just
+taking a break and having a conversation.
+Yeah. Sometimes.
+Yeah. Often, I feel I look forward to having the conversations. Especially if I have a day where I'm just going to doctor or appointments and things that are not as delightful. I look forward to sitting down, having a cup of coffee, and talking to someone I care about that cares about me.
+Oh, I would just like to get together with them. We're all not very well, and it's we live far away from each other now. So we don't get together as often as we used to. And [NAME] is very sick. So I just kinda would like to figure out a way to get this there.
+Lazy. Lazy because I'm just lying around.
+Right. We think that it would be, the one thing I'm taking with me is that the name of the person that you mentioned who wrote the movie, The Lobster, I'd like to look up some more of his films.
+Bye bye.",1,"Yeah. Often, I feel I look forward to having the conversations. Especially if I have a day where I'm just going to doctor or appointments and things that are not as delightful. I look forward to sitting down, having a cup of coffee, and talking to someone I care about that cares about me.; So we don't get together as often as we used to.","[[325, 337], [338, 533], [534, 557], [558, 614], [736, 784]]",5,0,1,we don't get together as often as we used,"[[739, 780]]",1,0,True
+deployment2_f2273edb_assessment,deployment2,f2273edb-140e-4ae2-9e96-da663cd77bad,assessment,US-4005,2026-07-04,128,"Just talking with friends.
+Feel a little lonely.
+I feel a lot of discomfort.
+Sort of like standoffish. Not enter, not being too close with anyone.
+Got a knock on a door. And talk to the person next door.
+Yes. Taking a walk. Saying hello to different people on the street.
+I guess my son and my daughter my sister,
+A little bit.
+Lazy. Laid back, tired,
+I should congregate with some of the people my neighbors, and just make small conversation.
+Looking through some writings that I did, doing things around my apartment. Straightening up, putting things the way I want them to look at. And just meditating.
+Oh, very happy. Very engaging,
+Be more outgoing. Leaving stress behind, and just being around people that I like.",1,"Feel a little lonely.; Sort of like standoffish. Not enter, not being too close with anyone. I should congregate with some of the people my neighbors, and just make small conversation.; Be more outgoing. Leaving stress behind, and just being around people that I like.","[[27, 48], [77, 113], [114, 146], [352, 409], [410, 443], [637, 677], [678, 719]]",7,0,1,Feel a little lonely.,"[[27, 48]]",1,0,True
+deployment2_077183f5_assessment,deployment2,077183f5-22e7-450a-a94e-ebc1e9d28b70,assessment,US-4005,2026-07-05,250,"My mother, my grandmother, they were strong in their beliefs. They stuck to what they meant to do and did it. And teachers I had back in elementary school
+My daughter. Sometimes my sister,
+Strength. Strength and wisdom, loving and caring.
+Forgive, forgiving other people. And being aware of their feelings more.
+Yes. My daughter. Women who are observing of things that are going on in the neighborhood. Where I whenever I'm looking for solitude, I can find it in some women.
+Some of the people that I did mention, well, my mother and grandmother, for one, they weren't very vocal with their feelings about different things. But other women that I've encountered were very supportive.
+My sister. To look up to forgiving others and letting bad feelings go because I see her sometimes as somebody who is unforgiven and can't see past what others do or feel
+Being there, being there and talking to me as a person, that I am. But not, I think that's it. Being there and talking
+[NAME]. Going to a friend I've seen, like, reaching out to other women of their own age and that have families and just be in there with them.
+Not really.
+All the things I said about the other women that were kind and caring, to take that more into me. And using it in my everyday life. And just loving more. Be more kind. And letting things go to the wayside. When they're not necessarily good for me.",1,"Being there, being there and talking to me as a person, that I am. But not, I think that's it. Being there and talking","[[854, 866], [867, 909], [910, 929], [930, 972]]",4,0,0,,[],0,0,False
+deployment2_0734857b_assessment,deployment2,0734857b-67a4-4c79-a9ed-d61be8a51f69,assessment,US-4005,2026-07-06,273,"It's a comfortable feeling. It... Yeah. It's a comfortable feeling.
+Yes. Situations where I'm living are not so great and that's what it's feeling like inside of myself. Not being able to complete a lot of things that I wanna do.
+Smoons. What was that? Could you repeat the rest of the question?
+No. Kinda smooth.
+Kinda barren. Stay inside kind of mood. Not congregating with residents, and just kinda like lonely.
+No.
+Playing with my cat. She keeps me going. And just being around her and playing throwing toys and it felt good.
+Okay.
+I feel better than I did earlier. I'm wanting to go downstairs with some of the other residents and just have brief conversation.
+Now I'm kinda like on an even keel. All day. Other days when I feel this way, it's usually the same feelings
+I would combine both of them. Steady and somewhat far and distant. Like, not here try and, like, try and, like, to bring in more to myself.
+A warm drink. Right now, I am drinking a cup of warm tea. Which is bringing my mood up a little bit.
+Yes. Take a walk. And just bring some meditation into myself. Think about something nice. Take some negative feelings and just throw them to the wind.
+I think going and having some conversation with others would lighten my moods some more of what it is. I like the people around here. They do lift you. And have, you know, good subject matter. Sometimes a little negative.
+To not stay so much inside. Get out more. Do things. Go outside. Take a walk with nature,",1,"Kinda barren. Stay inside kind of mood. Not congregating with residents, and just kinda like lonely. I feel better than I did earlier. I'm wanting to go downstairs with some of the other residents and just have brief conversation; : I think going and having some conversation with others would lighten my moods some more of what it is. I like the people around here. They do lift you. To not stay so much inside. Get out more. Do things. Go outside. Take a walk with nature","[[314, 386], [512, 665], [1167, 1430]]",3,0,1,"Not congregating with residents, and just kinda like lonely.","[[354, 386], [387, 414]]",2,0,True
+deployment2_e8d20022_assessment,deployment2,e8d20022-cb49-4d01-bc6f-2edb6b3862c2,assessment,US-4005,2026-07-15,301,"Kinda like upbeat music. Makes me feel good.
+So, like, music that gets you up. Gets you moving. Music you could sing to.
+I like Janice Joplin.
+No. All kinds of music. When it catches me, I like to listen to it.
+This story is I can't think of the name of it right now.
+Yes. Being with somebody who always looked over me. If I was in trouble, he would always be there. And, made me feel good, made me feel wanted, talked after. He was a great friend.
+No.
+Seventies music. Like I mentioned before, Huppie, sort of, like, get inside and make you move.
+Of course.
+I'll skip the question.
+Because I can't think of any titles.
+Yes.
+Night sand white satin. Sort of like mellowed me out. If that's the name of the song.
+Orchestra, like, from movies, you know, music from movies that would make me remember the movie and, like, different scenes in it. This kind of music makes me feel good.
+There are some songs, music, that does connect me to others. Music that I hear that daylight. You know? Connects me back to where I was with different people. Because everybody likes different music.
+Yes.
+If they're not seeing someone for a long time, if I heard a specific soundtrack. Of the music, it did bring me back, made me remember vividly of different things, that myself and either a group of people or a single person. Would bring out in me. Made me feel good or made me feel sad.
+Okay. Some music makes me think of my children. And how they were affected by it. They usually showed happiness or just enjoying each other, singing it and fooling around. And that was a extra special
+part.
+Okay.
+Goodbye.
+Should I disconnect?",1,"Yes. Being with somebody who always looked over me. If I was in trouble, he would always be there. And, made me feel good, made me feel wanted, talked after. He was a great friend.","[[268, 340], [341, 371], [372, 390], [391, 411], [412, 448]]",5,0,0,,[],0,0,False
+deployment2_d832d273_assessment,deployment2,d832d273-9217-4abe-9760-370b6bbeced7,assessment,US-4005,2026-07-20,221,"I'm excited where living a cleaner space. In where I live. Things being cleaned up, fixed,
+Giving people a chance. If you try to give people a chance and they don't accept it. Move on. Because you could always find someone who takes the chance and becomes friendly with you. But always be careful.
+Being surrounded by good people, not bullies. Bullies have to learn on their own and for the children to find within themselves how they can lead a person to goodness. And stay away from negativity.
+Having more positivity within myself and bringing it out to other people, talking more to people, not being pushed away. You know, like, from know it alls. Not being a know it all myself and trying not to be, cause I know I'm not. But to initiate more goals to people. You know? Like, don't stop where you are. Keep on going. It won't hurt you.
+Yes. I have mellowed out towards others, but there's still more that I have to find within myself. To accept these few other people. I have jumped over some things that kept me confined from these certain people. But, you know, I gotta watch my back too. And talking with these people after not wanting to be bothered with them, is a leak to better things.",1,"Being surrounded by good people, not bullies; Having more positivity within myself and bringing it out to other people, talking more to people, not being pushed away.","[[298, 330], [331, 343], [497, 570], [571, 594], [595, 617]]",5,0,1,"talking more to people, not being pushed away.","[[571, 594], [595, 617]]",2,0,True
+deployment2_e7b8c7d6_assessment,deployment2,e7b8c7d6-b1b3-42eb-800d-98b22bf238b8,assessment,US-4005,2026-08-08,158,"I was not surprised. It was just good that the other person caught, though, [NAME]. Confronted her about it.
+Well, today, it was my son. We were out today by son and daughter-in-law. They took me somewhere to get my eyes looked at. And then we went out to eat at a Mexican restaurant. It was nice.
+Communication.
+Too much right now because I'm getting ready for bed.
+Now we talk about things when I feel this way. I asked her the other day. I said, do you miss your father? She says, course, I do. I said, yeah. I miss him too.
+Yeah. Because you take people for a full.
+To be able to look each other in the face. And to talk about the things that have went on and there was no reason to lie about it. But looking at one another while you're talking instead of one turning away. Is that an ideal situation?",0,,[],0,0,1,I miss him too.,"[[512, 527]]",1,0,False
+deployment2_c977e829_assessment,deployment2,c977e829-7d32-40ab-afea-516437755020,assessment,US-4006,2026-08-04,234,"It's like he's a kitten again. He will follow me, and he stays with me wherever I go. He's been that way for the past couple of days ever since I came back from the hospital.
+The fact that I've made appointments with the doctors and I'm sure I will be taken care of. It just feels wonderful.
+I'm in a very happy mood right now. Well, it's still not what it should be, but I had the oxygen on. To make sure it does get up there
+That after I got the needle in my eye, the swelling has went down. And I will be able to take a shower tomorrow.
+It just makes me feel good. I feel good today. I feel as if I've accomplished things today. I did a load of wash. I made my beds. Changed linens, I just feel good.
+I've had [NAME], my cat, for thirteen years. He's always there for me. I love him.
+I'm just going to lay and watch television. I have been productive enough all day. I just wanna relax now.
+Well, it would be going down to the round room and chatting with my friends but I know I can't do that today. So I will just lay around and watch television.
+The self care is very important to anyone's health. It's a great thing to take care of yourself.
+Thank you.",1,"Well, it would be going down to the round room and chatting with my friends but I know I can't do that today. So I will just lay around and watch television","[[328, 333], [900, 1051]]",2,0,0,,[],0,0,False
+deployment2_d849c2ee_assessment,deployment2,d849c2ee-9acd-44a7-a5ee-eaa769ab950a,assessment,US-4006,2026-08-08,123,"The friendship that we share.
+It's only been affecting me because I am a little bit unhappy with the administration.
+It's nice to have him curl up beside me.
+I really don't remember when I first decided to do it. But I've done it for a long time, and it worked that well.
+I don't think my sleep routine has anything to do with what I'd like to do when I'm awake.
+My husband would still be alive.
+It's just everything is fine the way it is.
+Getting comfortable in the bed.
+If I am happy during the day, I am really peaceful and ready to go to sleep when it comes.
+That it's nice that my cat feels makes me feel relaxed.",1,My husband would still be alive.,"[[363, 395]]",1,0,0,,[],0,0,False
+deployment2_ff4cae10_assessment,deployment2,ff4cae10-ddc9-4ddb-938f-0ea39c3e5337,assessment,US-4006,2026-08-09,64,"Self is just a very funny show.
+Funny things on the Internet.
+Watching flowers grow.
+It feels great to me if
+I really can't imagine anything like that.
+The Internet makes me live. There's no one special in my life.
+[NAME] is just a very funny cat.
+Anything by the beach.
+My friends,
+Laughter is just great by itself.
+My cat is my joy.",1,The Internet makes me live. There's no one special in my life.,"[[152, 214]]",1,0,1,There's no one special in my life.,"[[180, 214]]",1,0,True
+deployment2b_701499e4_assessment,deployment2b,701499e4-a327-4d29-a170-1b1cc07484f0,assessment,US-4004,2026-08-19,93,"Well, he looks a lot like my dog that passed away. And I miss him. And this dog is really fun, and he fills that dog love I need.
+I come into the air conditioning.
+Not really. I just know that the heat outside makes me feel dizzy. And if I take a hot shower, afterwards, the steamy bathroom makes me feel dizzy as well.
+So just use my inhalers and stay cool as I can.
+To enjoy the little dog as long as I have him because he'll be going home soon.",1,"Well, he looks a lot like my dog that passed away. And I miss him. And this dog is really fun, and he fills that dog love I need.","[[0, 5], [6, 94], [95, 129]]",3,0,1,I miss him,"[[55, 66]]",1,0,True
